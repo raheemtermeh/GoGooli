@@ -1,0 +1,5 @@
+database:
+  url: "postgres://termeh:hemret@localhost:5432/goyandb?sslmode=disable"
+
+server:
+  port: ":8080"
