@@ -22,3 +22,12 @@ func (s *Server) handleGetProducts(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, products)
 }
+
+func (s *Server) handleGetUserByID(c *gin.Context) {
+	id := c.Param("id")
+
+	c.JSON(http.StatusOK, gin.H{
+		"message": "Fetching data for user",
+		"user_id": id,
+	})
+}

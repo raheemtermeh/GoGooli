@@ -30,5 +30,7 @@ func (s *Server) setupRoutes(router *gin.Engine) {
 	{
 		api.GET("/ping", s.handlePing)
 		api.GET("/products", s.handleGetProducts)
+		api.GET("/users/:id", s.handleGetUserByID)
+
 	}
 }
