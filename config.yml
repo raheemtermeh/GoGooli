@@ -3,3 +3,6 @@ database:
 
 server:
   port: ":8080"
+
+security:
+  jwt_secret: "a-very-secret-key-that-should-be-long-and-random"

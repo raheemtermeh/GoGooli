@@ -4,12 +4,11 @@ import (
 	"context"
 	"log"
 
-	"github.com/raheemtermeh/goyan-framework/internal/config" // <-- پکیج جدید رو اضافه کن
+	"github.com/raheemtermeh/goyan-framework/internal/config" 
 	"github.com/raheemtermeh/goyan-framework/internal/usecase/product"
 	"github.com/raheemtermeh/goyan-framework/platform/database"
 	"github.com/raheemtermeh/goyan-framework/platform/database/sqlc_generated"
 	"github.com/raheemtermeh/goyan-framework/platform/web"
-	// "github.com/jackc/pgx/v5/pgxpool" // <-- دیگه به این نیاز مستقیم نداریم
 )
 
 func main() {
@@ -29,7 +28,7 @@ func main() {
 	productRepo := database.NewProductRepository(queries)
 	getProductsUsecase := product.NewGetProductsUsecase(productRepo)
 
-	server := web.NewServer(getProductsUsecase)
+	server := web.NewServer(getProductsUsecase, cfg)
 	log.Printf("Server is starting on %s...", cfg.Server.Port)
 
 	if err := server.Start(cfg.Server.Port); err != nil {
