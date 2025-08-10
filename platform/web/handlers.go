@@ -22,3 +22,7 @@ func (s *Server) handleGetProducts(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, products)
 }
+
+func (s *Server) handleProfile(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{"message": "Welcome to your protected profile!"})
+}	
