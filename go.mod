@@ -1,4 +1,4 @@
-module github.com/raheemtermeh/goyan-framework
+module github.com/raheemtermeh/GoGooli
 
 go 1.23.0
 
