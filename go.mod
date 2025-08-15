@@ -1,5 +1,4 @@
-module github.com/raheemtermeh/GoGooli
-
+module github.com/raheemtermeh/goyan-framework
 go 1.23.0
 
 require (
